@@ -8,7 +8,7 @@ import java.util.Properties;
 
 public class ConfigFileReader {
 	
-	private Properties properties;
+	private static Properties properties;
 	private final String propertyFilePath= "D:\\Interview Preparation\\JokerFrameWork\\configuration\\data.properties";
 
 	
@@ -41,9 +41,14 @@ public class ConfigFileReader {
 		else throw new RuntimeException("implicitlyWait not specified in the Configuration.properties file.");		
 	}
 	
-	public String getApplicationUrl() {
+	public  String getApplicationUrl() {
 		String url = properties.getProperty("url");
 		if(url != null) return url;
+		else throw new RuntimeException("url not specified in the Configuration.properties file.");
+	}
+	public  String getBrowser() {
+		String browser = properties.getProperty("browser");
+		if(browser != null) return browser;
 		else throw new RuntimeException("url not specified in the Configuration.properties file.");
 	}
 }
