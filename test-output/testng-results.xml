@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-11-20T15:16:54 EET" name="Default suite" finished-at="2022-11-20T15:17:08 EET" duration-ms="14012">
+  <suite started-at="2022-11-21T14:30:19 EET" name="Default suite" finished-at="2022-11-21T14:30:20 EET" duration-ms="585">
     <groups>
     </groups>
-    <test started-at="2022-11-20T15:16:54 EET" name="Default test" finished-at="2022-11-20T15:17:08 EET" duration-ms="14012">
-      <class name="deleteIt.NewTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:deleteIt.NewTest@72057ecf]" started-at="2022-11-20T15:16:54 EET" name="setUp" finished-at="2022-11-20T15:17:08 EET" duration-ms="13623" status="PASS">
+    <test started-at="2022-11-21T14:30:19 EET" name="Default test" finished-at="2022-11-21T14:30:20 EET" duration-ms="585">
+      <class name="testCases.LoginScenarios">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.LoginScenarios@795cd85e]" started-at="2022-11-21T14:30:10 EET" name="setUp" finished-at="2022-11-21T14:30:19 EET" duration-ms="9155" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="f()[pri:0, instance:deleteIt.NewTest@72057ecf]" started-at="2022-11-20T15:17:08 EET" name="f" finished-at="2022-11-20T15:17:08 EET" duration-ms="7" status="PASS">
+        <test-method signature="verifyUserLogin()[pri:0, instance:testCases.LoginScenarios@795cd85e]" started-at="2022-11-21T14:30:19 EET" name="verifyUserLogin" finished-at="2022-11-21T14:30:20 EET" duration-ms="526" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- f -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:deleteIt.NewTest@72057ecf]" started-at="2022-11-20T15:17:08 EET" name="tearDown" finished-at="2022-11-20T15:17:08 EET" duration-ms="347" status="PASS">
+        </test-method> <!-- verifyUserLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.LoginScenarios@795cd85e]" started-at="2022-11-21T14:30:20 EET" name="tearDown" finished-at="2022-11-21T14:30:20 EET" duration-ms="148" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- deleteIt.NewTest -->
+      </class> <!-- testCases.LoginScenarios -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

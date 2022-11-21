@@ -5,15 +5,17 @@ import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 public class BaseClass {
 
-	public static WebDriver driver;
+	protected static  WebDriver driver;
 
-	@BeforeTest
-	public static void setUp() {
+	@BeforeSuite
+	public  WebDriver setUp() {
 
 		if (new ConfigFileReader().getBrowser().equalsIgnoreCase("chrome")) {
 
@@ -28,11 +30,13 @@ public class BaseClass {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
+		return driver;
+		
 	}
 
-	@AfterTest
+	@AfterSuite
 	public void tearDown() {
-		driver.quit();
+		driver.close();
 
 	}
 
