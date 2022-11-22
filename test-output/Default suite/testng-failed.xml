@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.NavigationBarTest">
+      <class name="testCases.LoginScenarios">
         <methods>
-          <include name="verifyNaviagationBarIsDisplayed"/>
+          <include name="setUp"/>
+          <include name="verifyUserLogin" invocation-numbers="1 2"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- testCases.NavigationBarTest -->
+      </class> <!-- testCases.LoginScenarios -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
