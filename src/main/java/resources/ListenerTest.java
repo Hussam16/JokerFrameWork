@@ -27,12 +27,12 @@ public class ListenerTest implements ITestListener {
 	@Override
 	public void onTestFailure(ITestResult Result) {
 		System.out.println("The name of the testcase failed is :" + Result.getName());
-		try {
-			base.takeSnapShot(Result.getName());
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+//		try {
+//			base.takeSnapShot(Result.getName());
+//		} catch (Exception e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
 	}
 
 	// When Test case get Skipped, this method is called.
