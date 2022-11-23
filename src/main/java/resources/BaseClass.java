@@ -1,21 +1,23 @@
 package resources;
 
+import java.io.File;
 import java.time.Duration;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
 
 public class BaseClass {
 
-	protected static  WebDriver driver;
+	protected static WebDriver driver;
 
 	@BeforeSuite
-	public  WebDriver setUp() {
+	public WebDriver setUp() {
 
 		if (new ConfigFileReader().getBrowser().equalsIgnoreCase("chrome")) {
 
@@ -31,13 +33,19 @@ public class BaseClass {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		return driver;
-		
+
 	}
 
 	@AfterSuite
 	public void tearDown() {
 		driver.close();
 
+	}
+
+	public void takeSnapShot(String methodName) throws Exception {
+
+		File SrcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(SrcFile, new File("./Screenshots/" + methodName + "screenshot.png"));
 	}
 
 }
