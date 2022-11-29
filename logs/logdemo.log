@@ -1,0 +1,5 @@
+2022-11-29 16:02:56,843 INFO t.Test [main] message info
+2022-11-29 16:02:56,846 ERROR t.Test [main] message info
+2022-11-29 16:02:56,846 WARN t.Test [main] message info
+2022-11-29 16:02:56,846 FATAL t.Test [main] message info
+2022-11-29 16:02:56,846 TRACE t.Test [main] trace message

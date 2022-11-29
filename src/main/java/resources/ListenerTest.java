@@ -6,15 +6,18 @@ import org.testng.ITestResult;
 
 public class ListenerTest implements ITestListener {
 	
-	BaseClass base = new BaseClass();
+	
 
 	@Override
-	public void onFinish(ITestContext Result) {
+	public void onFinish(ITestContext context) {
+
 
 	}
 
 	@Override
-	public void onStart(ITestContext Result) {
+	public void onStart(ITestContext context) {
+		
+
 
 	}
 
@@ -27,6 +30,7 @@ public class ListenerTest implements ITestListener {
 	@Override
 	public void onTestFailure(ITestResult Result) {
 		System.out.println("The name of the testcase failed is :" + Result.getName());
+			
 //		try {
 //			base.takeSnapShot(Result.getName());
 //		} catch (Exception e) {
@@ -39,12 +43,14 @@ public class ListenerTest implements ITestListener {
 	@Override
 	public void onTestSkipped(ITestResult Result) {
 		System.out.println("The name of the testcase Skipped is :" + Result.getName());
+
 	}
 
 	// When Test case get Started, this method is called.
 	@Override
 	public void onTestStart(ITestResult Result) {
 		System.out.println(Result.getName() + " test case started");
+
 	}
 
 	// When Test case get passed, this method is called.
